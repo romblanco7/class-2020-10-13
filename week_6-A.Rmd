@@ -62,6 +62,9 @@ Interpret the meaning of the graphic.
 
 Hint: Review the use of `rbinom()`, especially the `n`, `size` and `prob` arguments, from Chapter 2. Start by creating a tibble with one row. In that row, we assume that there are truly 100 red beads. Draw, in that case, from `rbinom()`, with the appropriate arguments, to see how many red beads we might draw in that case. Call that variable `numb_red`. But that is just one draw! Now make a tibble with two such rows. `map_int()` is a nice tool. See the pattern? We just need a tibble with lots of rows, each one indicating both the "true" number of red beads, and then the number we draw with our paddle. But each value of the true number of red beads needs more than one row, otherwise we won't have enough data to describe the full joint distribution.
 
+```{r}
+tibble(prob = rbinom (n = 1, size = 25, prob = .01))
+```
 
 
 
